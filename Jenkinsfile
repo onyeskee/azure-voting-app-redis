@@ -1,6 +1,5 @@
 pipeline {
    agent any
-       docker {image 'docker'}
 
    stages {
       stage('Verify Branch') {
