@@ -10,8 +10,12 @@ pipeline {
       stage('Docker Images') {
          steps { 
             sh label: '', script: '''             
-               docker images -a              
-                '''
+               docker images -a  
+            
+               docker build -t jenkins-pipeline .
+               docker images -a
+               cd ..   '''       
+                
             
          }
       }
