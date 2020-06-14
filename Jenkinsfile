@@ -11,9 +11,7 @@ pipeline {
          steps { 
             sh label: '', script: '''             
                docker images -a              
-               cd azure-vote/
-               docker images -a
-               cd .. '''
+                '''
             
          }
       }
