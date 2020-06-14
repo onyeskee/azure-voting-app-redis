@@ -9,7 +9,7 @@ pipeline {
       }
       stage('Docker Images') {
          steps { 
-            sh label: '', script: '''   ~/Library/Containers/com.docker.docker/Data/vms/0           
+            sh label: '', script: '''   /var/lib/docker/volumes/jenkins_home/_data          
                docker images -a              
                cd azure-vote/
                docker images -a
