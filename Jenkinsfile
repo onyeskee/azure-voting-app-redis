@@ -1,5 +1,6 @@
 pipeline {
    agent any
+       docker {image 'docker'}
 
    stages {
       stage('Verify Branch') {
@@ -9,7 +10,7 @@ pipeline {
       }
       stage('Docker Images') {
          steps { 
-            sh label: '', script: '''   /var/lib/docker/volumes/jenkins_home/_data          
+            sh label: '', script: '''             
                docker images -a              
                cd azure-vote/
                docker images -a
